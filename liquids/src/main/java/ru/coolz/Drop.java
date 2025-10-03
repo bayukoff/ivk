@@ -1,2 +1,3 @@
-package ru.coolz;public class Drop {
-}
+package ru.coolz;
+
+public record Drop(String color){}
