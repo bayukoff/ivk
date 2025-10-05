@@ -3,3 +3,4 @@ plugins {
 }
 rootProject.name = "test-tasks"
 include("liquids")
+include("fileshare")
