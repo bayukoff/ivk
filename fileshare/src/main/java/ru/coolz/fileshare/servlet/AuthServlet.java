@@ -20,8 +20,8 @@ public class AuthServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp){
-        String username = req.getParameter("username");
-        String password = req.getParameter("password");
+        var username = req.getParameter("username");
+        var password = req.getParameter("password");
         try{
             if (authService.authenticate(username, password)) {
                 String sessionId = authService.createSession(username);

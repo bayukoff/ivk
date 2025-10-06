@@ -4,4 +4,4 @@ plugins {
 rootProject.name = "test-tasks"
 include("liquids")
 include("fileshare")
-include("weather-service")
+include("weatherservice")

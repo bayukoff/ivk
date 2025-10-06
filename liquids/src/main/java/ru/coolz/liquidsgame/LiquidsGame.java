@@ -5,6 +5,8 @@ import ru.coolz.liquidsgame.game.Game;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.Properties;
 
@@ -16,7 +18,7 @@ public class LiquidsGame {
     }
 
     private static Game initGame(){
-        var properties = loadProperties("liquids/config/game.properties");
+        var properties = loadProperties("config/game.properties");
         var colorCount = Integer.parseInt(properties.getProperty("game.color.count"));
         var tubeCount = Integer.parseInt(properties.getProperty("game.tube.count"));
         var tubeCapacity = Integer.parseInt(properties.getProperty("game.tube.capacity"));
@@ -26,12 +28,13 @@ public class LiquidsGame {
     }
 
     private static Properties loadProperties(String filename) {
-        try (FileInputStream fis = new FileInputStream(filename)) {
+        var path = Paths.get(filename);
+        try (FileInputStream fis = new FileInputStream(path.toFile())) {
             var props = new Properties();
             props.load(fis);
             return props;
         } catch (FileNotFoundException e) {
-            System.err.println("File not found: " + filename);
+            System.err.println("File not found: " + path.toAbsolutePath());
         } catch (IOException e) {
             e.printStackTrace();
         }

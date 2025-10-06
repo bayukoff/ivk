@@ -11,7 +11,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/fileshare" />
             <option value="$PROJECT_DIR$/liquids" />
-            <option value="$PROJECT_DIR$/weather-service" />
+            <option value="$PROJECT_DIR$/weatherservice" />
           </set>
         </option>
       </GradleProjectSettings>

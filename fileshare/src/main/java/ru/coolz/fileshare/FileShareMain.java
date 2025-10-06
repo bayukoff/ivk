@@ -14,8 +14,6 @@ import ru.coolz.fileshare.servlet.AuthServlet;
 import ru.coolz.fileshare.servlet.DownloadServlet;
 import ru.coolz.fileshare.servlet.UploadServlet;
 
-
-import java.io.IOException;
 import java.util.EnumSet;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;

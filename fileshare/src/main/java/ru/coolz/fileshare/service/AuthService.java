@@ -21,7 +21,7 @@ public class AuthService{
     }
 
     public String createSession(String username) {
-        String sessionId = UUID.randomUUID().toString();
+        var sessionId = UUID.randomUUID().toString();
         sessions.put(sessionId, username);
         return sessionId;
     }
